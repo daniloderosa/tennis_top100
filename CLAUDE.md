@@ -91,7 +91,7 @@ Stile data-journalism serif (mockup: direzione B di "ATP Best 50 - Direzioni"; p
 - Repo: `daniloderosa/tennis_top50`, branch di lavoro: **main** (l'utente vuole che si lavori direttamente su main, senza branch feature)
 - GitHub Pages via **GitHub Actions** (`.github/workflows/deploy.yml`): ogni push su main fa build+deploy automatico
 - Source in Settings → Pages deve essere "GitHub Actions" (non più gh-pages branch)
-- `vite.config.js` ha `base: '/tennis_top50/'` — non rimuoverlo
+- `vite.config.js` ricava `base` da `GITHUB_REPOSITORY` in CI (in locale `/`): rinominare la repo non rompe Pages
 - `npm run deploy` (gh-pages) esiste ancora ma non serve più
 
 ## Flusso di lavoro con l'utente
